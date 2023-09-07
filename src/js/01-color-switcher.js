@@ -4,10 +4,13 @@ const btnStop = document.querySelector('button[data-stop]');
 
 btnStart.addEventListener('click', onStart); 
 function onStart() {
+    const randomColor = getRandomHexColor();
+    document.body.style.backgroundColor = randomColor;
+
     timerId = setInterval(() => {
-        const randomColor = getRandomHexColor();
-        document.body.style.backgroundColor = randomColor;
-        }, 1000)
+    const randomColor = getRandomHexColor();
+    document.body.style.backgroundColor = randomColor;
+    }, 1000)
     btnStart.setAttribute('disabled', 'true');
     btnStop.removeAttribute('disabled');
 };
